@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+
+  app:
+    build: ./app
+    ports:
+      - "8085:8080"
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+  loki:
+    image: grafana/loki
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./loki-config.yml:/etc/loki/local-config.yaml
+
+  promtail:
+    image: grafana/promtail
+    volumes:
+      - ./promtail-config.yml:/etc/promtail/config.yml
+      - /var/lib/docker/containers:/var/lib/docker/containers
+    depends_on:
+      - loki
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+      - loki
+
+  jaeger:
+    image: jaegertracing/all-in-one
+    ports:
+      - "16686:16686"
+
