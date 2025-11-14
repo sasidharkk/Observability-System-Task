@@ -177,11 +177,12 @@ curl localhost:8080/metrics
 
 <img width="1913" height="1033" alt="Screenshot 2025-11-14 121705" src="https://github.com/user-attachments/assets/fac9d06a-12fc-4a26-93f2-7b0b2b186158" />
 
+<img width="1913" height="1036" alt="Screenshot 2025-11-14 121731" src="https://github.com/user-attachments/assets/7cc0ae52-2a35-47e3-8c55-9c7c5e40c21f" />
+
 <img width="1911" height="1040" alt="Screenshot 2025-11-14 123354" src="https://github.com/user-attachments/assets/d6cce7d0-459e-4d25-8486-8118023f175d" />
 
 <img width="1916" height="1037" alt="Screenshot 2025-11-14 121945" src="https://github.com/user-attachments/assets/cf5058c1-28fb-476e-a53c-e12980c88194" />
 
-<img width="1913" height="1033" alt="Screenshot 2025-11-14 121705" src="https://github.com/user-attachments/assets/d1feff04-e497-41ab-b61a-2df2711eac14" />
 
 Generate traffic:
 
